@@ -246,11 +246,22 @@ h3{font-size:20px;line-height:1.32;letter-spacing:-.01em}
 
 footer{border-top:1px solid var(--line);background:var(--paper)}
 .foot{
-  display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
-  padding:26px 0;padding-bottom:max(26px,env(safe-area-inset-bottom));
-  color:var(--muted);font-size:13.5px;
+  display:grid;grid-template-columns:1fr auto;gap:26px 56px;align-items:start;
+  padding:34px 0;padding-bottom:max(34px,env(safe-area-inset-bottom));
 }
-.foot b{font-family:var(--serif);color:var(--forest);font-size:15px;font-weight:600}
+.foot b{display:block;font-family:var(--serif);color:var(--forest);font-size:16px;font-weight:600}
+.foot__id span{display:block;margin-top:5px;color:var(--muted);font-size:13.5px;line-height:1.5}
+.foot__contacts{display:grid;gap:9px;justify-items:end}
+.foot__contacts a{
+  display:inline-flex;align-items:baseline;gap:11px;
+  padding:3px 0;color:var(--forest);font-size:15.5px;font-weight:600;
+  text-decoration:none;font-variant-numeric:tabular-nums;white-space:nowrap;
+}
+.foot__contacts a:hover{color:var(--terracotta)}
+.foot__tag{
+  color:var(--terracotta);font-size:11.5px;font-weight:700;
+  letter-spacing:.09em;text-transform:uppercase;
+}
 
 /* ---------- tablet ---------- */
 @media (max-width:1040px){
@@ -299,7 +310,9 @@ footer{border-top:1px solid var(--line);background:var(--paper)}
   .vid--tall{max-width:none}
   .vid video{border-radius:var(--radius-sm)}
   .rev{padding:22px 20px}
-  .foot{flex-direction:column;gap:6px}
+  .foot{grid-template-columns:1fr;gap:22px}
+  .foot__contacts{justify-items:start;gap:4px}
+  .foot__contacts a{padding:8px 0;font-size:16px}
 }
 @media (max-width:380px){
   .job__when,.item__org,.fact span{font-size:13.5px}
@@ -609,8 +622,15 @@ footer{border-top:1px solid var(--line);background:var(--paper)}
 
 <footer>
   <div class="wrap foot">
-    <b>Аминджанова Рано Шавкатовна</b>
-    <span>Педагог нулевого класса · подготовка детей к школе</span>
+    <div class="foot__id">
+      <b>Аминджанова Рано Шавкатовна</b>
+      <span>Педагог нулевого класса · подготовка детей к школе</span>
+    </div>
+    <div class="foot__contacts">
+      <a href="https://wa.me/79139590307">+7 913 959-03-07<span class="foot__tag">WhatsApp</span></a>
+      <a href="https://t.me/+79130655360">+7 913 065-53-60<span class="foot__tag">Telegram</span></a>
+      <a href="mailto:rano.amgv@gmail.com">rano.amgv@gmail.com</a>
+    </div>
   </div>
 </footer>
 
