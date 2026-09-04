@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Аминджанова Рано Шавкатовна — педагог нулевого класса, подготовка детей к школе. Стаж 24+ года, победитель конкурса «Успешный педагог» 2024.">
+<meta property="og:title" content="Аминджанова Рано Шавкатовна — педагог нулевого класса">
+<meta property="og:description" content="Стаж 24+ года, 17 лет с будущими первоклассниками. Победитель конкурса «Успешный педагог», 2024.">
+<meta property="og:image" content="rano-portrait.jpg">
+<meta property="og:type" content="profile">
+<title>Аминджанова Рано Шавкатовна</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,500;0,600;0,700;1,500&family=Golos+Text:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --paper:#F7F5EF;
+  --surface:#FFFFFF;
+  --ink:#14223C;
+  --ink-soft:#2C3A56;
+  --panel:#14223C;
+  --panel-fg:#EFEDE6;
+  --panel-muted:#A9B2C4;
+  --accent-on-panel:#E3B75F;
+  --btn-bg:#14223C;
+  --btn-fg:#F7F5EF;
+  --btn-panel-bg:#F7F5EF;
+  --btn-panel-fg:#14223C;
+  --muted:#66708A;
+  --line:#DDD9CE;
+  --line-soft:#E9E5DB;
+  --rule:#D4DEEA;
+  --accent:#A8761A;
+  --accent-ink:#8A5F12;
+  --accent-soft:#F1E6CC;
+  --tint:#ECEFF3;
+  --radius:4px;
+  --radius-lg:10px;
+  --shadow:0 18px 44px rgba(20,34,60,.10);
+  --serif:"Vollkorn",Georgia,"Times New Roman",serif;
+  --sans:"Golos Text",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  --wrap:1120px;
+}
+*{box-sizing:border-box}
+html{background:var(--paper);color-scheme:light}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:17px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+img,video{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+.wrap{width:min(100% - 40px,var(--wrap));margin-inline:auto}
+.sect{padding:88px 0}
+.sect--tight{padding:60px 0}
+.sect--ink{background:var(--panel);color:var(--panel-fg)}
+.sect--tint{background:var(--tint)}
+
+/* --- eyebrow --- */
+.eyebrow{
+  display:flex;align-items:center;gap:10px;
+  margin:0 0 16px;
+  color:var(--accent-ink);
+  font-size:12px;font-weight:700;line-height:1.4;
+  letter-spacing:.14em;text-transform:uppercase;
+}
+.eyebrow::before{content:"";width:26px;height:1px;background:currentColor;flex:none}
+.sect--ink .eyebrow,.rev--wide .eyebrow{color:var(--accent-on-panel)}
+
+/* --- headings --- */
+h1,h2,h3{font-family:var(--serif);font-weight:600;margin:0;text-wrap:balance;letter-spacing:-.015em}
+h1{font-size:clamp(34px,4.6vw,58px);line-height:1.06}
+h2{font-size:clamp(27px,3.1vw,40px);line-height:1.14}
+h3{font-size:20px;line-height:1.3;letter-spacing:0}
+.lead{max-width:60ch;margin:22px 0 0;font-size:clamp(17px,1.5vw,19.5px);line-height:1.6;color:var(--ink-soft)}
+.sect--ink .lead{color:var(--panel-muted)}
+.sect-head{max-width:44ch}
+
+/* --- top bar --- */
+.top{border-bottom:1px solid var(--line);background:var(--surface)}
+.top__in{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px 0;flex-wrap:wrap}
+.top__name{font-family:var(--serif);font-size:17px;font-weight:600;letter-spacing:.01em}
+.top__right{display:flex;align-items:center;gap:18px;flex-wrap:wrap;font-size:14px}
+.top__tel{font-weight:600;text-decoration:none;font-variant-numeric:tabular-nums}
+.top__tel:hover{color:var(--accent-ink)}
+.pill{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:5px 13px;border-radius:999px;
+  background:var(--accent-soft);color:var(--accent-ink);
+  font-size:12.5px;font-weight:700;letter-spacing:.02em;
+}
+.pill::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
+
+/* --- hero --- */
+.hero{padding:70px 0 78px}
+.hero__grid{display:grid;grid-template-columns:1.06fr .94fr;gap:66px;align-items:center}
+.hero__role{margin:26px 0 0;font-family:var(--serif);font-size:clamp(19px,2vw,23px);font-style:italic;color:var(--ink-soft);line-height:1.4}
+.contacts{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  min-height:52px;padding:13px 24px;border:0;border-radius:999px;
+  background:var(--btn-bg);color:var(--btn-fg);
+  font-family:inherit;font-size:15.5px;font-weight:600;text-decoration:none;
+  transition:transform .18s ease,box-shadow .18s ease;
+}
+.btn:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+.btn--ghost{background:transparent;color:var(--ink);border:1px solid var(--line);box-shadow:none}
+.btn--ghost:hover{border-color:var(--accent);color:var(--accent-ink)}
+.btn__num{font-variant-numeric:tabular-nums}
+.hero__note{margin:16px 0 0;max-width:38ch;color:var(--muted);font-size:13.5px;line-height:1.5}
+
+.figure{position:relative;padding:0 0 26px 26px}
+.figure::before{
+  content:"";position:absolute;left:0;bottom:0;
+  width:74%;height:78%;border:1px solid var(--accent);
+  border-radius:var(--radius-lg);
+}
+.figure__img{
+  position:relative;width:100%;aspect-ratio:.82;object-fit:cover;object-position:50% 22%;
+  border-radius:var(--radius-lg);box-shadow:var(--shadow);
+}
+.figure__badge{
+  position:absolute;left:0;bottom:-2px;z-index:2;max-width:252px;
+  padding:15px 18px;border-radius:var(--radius-lg);
+  background:var(--panel);color:var(--panel-fg);box-shadow:var(--shadow);
+  font-size:13.5px;font-weight:500;line-height:1.45;
+}
+.figure__badge b{display:block;font-family:var(--serif);font-size:15.5px;font-weight:600;margin-bottom:3px}
+
+/* --- facts --- */
+.facts{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--surface)}
+.facts__grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.fact{padding:26px 30px;border-right:1px solid var(--line-soft)}
+.fact:last-child{border-right:0}
+.fact b{display:block;font-family:var(--serif);font-size:25px;font-weight:600;line-height:1.2;font-variant-numeric:tabular-nums}
+.fact span{display:block;margin-top:5px;color:var(--muted);font-size:14px;line-height:1.45}
+
+/* --- about --- */
+.about__grid{display:grid;grid-template-columns:1.35fr .85fr;gap:64px;align-items:start;margin-top:38px}
+.prose p{margin:0 0 20px;max-width:64ch}
+.prose p:last-child{margin-bottom:0}
+.prose em{font-family:var(--serif);font-style:italic}
+.quote{
+  padding:30px 28px 28px;border-radius:var(--radius-lg);
+  background:var(--surface);border:1px solid var(--line-soft);
+  background-image:repeating-linear-gradient(to bottom,transparent 0 31px,var(--rule) 31px 32px);
+  background-position:0 44px;
+}
+.quote__mark{font-family:var(--serif);font-size:46px;line-height:.7;color:var(--accent);display:block;margin-bottom:14px}
+.quote p{margin:0;font-family:var(--serif);font-size:22px;line-height:1.45;font-weight:500}
+.quote cite{display:block;margin-top:18px;font-style:normal;color:var(--muted);font-size:13.5px;font-family:var(--sans)}
+.mini{margin-top:22px;display:grid;gap:1px;background:var(--line-soft);border:1px solid var(--line-soft);border-radius:var(--radius-lg);overflow:hidden}
+.mini div{background:var(--paper);padding:14px 18px;font-size:14px}
+.mini b{display:block;font-weight:600}
+.mini span{color:var(--muted)}
+
+/* --- method --- */
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:40px}
+.card{padding:28px;border-radius:var(--radius-lg);background:var(--surface);border:1px solid var(--line-soft)}
+.card h3{margin-bottom:10px}
+.card p{margin:0;color:var(--ink-soft);font-size:15.5px;line-height:1.6}
+.rows{margin-top:34px;border-top:1px solid var(--line)}
+.row{display:grid;grid-template-columns:minmax(190px,.42fr) 1fr;gap:22px;padding:17px 2px;border-bottom:1px solid var(--line-soft)}
+.row dt{font-weight:600;font-size:15px}
+.row dd{margin:0;color:var(--muted);font-size:15px}
+
+/* --- video --- */
+.video{max-width:840px;margin:36px auto 0}
+.video video{width:100%;border-radius:var(--radius-lg);background:#000;box-shadow:var(--shadow)}
+.video__cap{margin:16px 0 0;text-align:center;color:var(--panel-muted);font-size:13.5px}
+.video__fallback{margin:16px 0 0;text-align:center;color:var(--panel-muted);font-size:14px}
+
+/* --- timeline --- */
+.tl{margin-top:40px;border-top:1px solid var(--line)}
+.job{display:grid;grid-template-columns:minmax(180px,.3fr) 1fr;gap:34px;padding:30px 0;border-bottom:1px solid var(--line-soft)}
+.job__when{font-size:14px;font-weight:600;font-variant-numeric:tabular-nums;line-height:1.5}
+.job__now{display:block;margin-top:7px;font-weight:700;color:var(--accent-ink);font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+.job__org{font-family:var(--serif);font-size:21px;font-weight:600;line-height:1.3}
+.job__where{margin:4px 0 0;color:var(--muted);font-size:14.5px}
+.job__title{margin:12px 0 0;font-weight:600;font-size:15.5px}
+.job ul{margin:12px 0 0;padding:0;list-style:none;display:grid;gap:8px}
+.job li{position:relative;padding-left:19px;color:var(--ink-soft);font-size:15.5px;line-height:1.55}
+.job li::before{content:"";position:absolute;left:2px;top:.68em;width:7px;height:1px;background:var(--accent)}
+
+/* --- two columns of lists --- */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:60px;margin-top:40px}
+.list{border-top:1px solid var(--line);margin:16px 0 0}
+.item{padding:18px 0;border-bottom:1px solid var(--line-soft)}
+.item__year{color:var(--accent-ink);font-size:12.5px;font-weight:700;letter-spacing:.1em;font-variant-numeric:tabular-nums}
+.item__name{margin:5px 0 0;font-family:var(--serif);font-size:18px;font-weight:600;line-height:1.35}
+.item__org{margin:5px 0 0;color:var(--muted);font-size:14.5px;line-height:1.5}
+.duo h3{font-size:15px;font-family:var(--sans);font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+
+/* --- award --- */
+.award{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;margin-top:40px}
+.award__imgs{display:grid;grid-template-columns:1.5fr 1fr;gap:16px;align-items:start}
+.award__imgs img{width:100%;border-radius:var(--radius-lg);box-shadow:var(--shadow);object-fit:cover}
+.award__imgs img:first-child{aspect-ratio:1.06}
+.award__imgs img:last-child{aspect-ratio:.66}
+.award__body p{color:var(--ink-soft);font-size:16px}
+.certline{margin-top:22px;padding:18px 20px;border-left:2px solid var(--accent);background:var(--surface);font-size:15px;line-height:1.55}
+.certline b{display:block;font-family:var(--serif);font-size:18px;font-weight:600;margin-bottom:4px}
+
+/* --- reviews --- */
+.revs{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:40px}
+.rev{padding:26px 26px 24px;background:var(--surface);border:1px solid var(--line-soft);border-radius:var(--radius-lg)}
+.rev--wide{grid-column:1 / -1;background:var(--panel);color:var(--panel-fg);border-color:transparent}
+.rev p{margin:0;font-size:16px;line-height:1.6}
+.rev--wide p{font-family:var(--serif);font-size:clamp(19px,2vw,24px);line-height:1.45;font-weight:500}
+.rev cite{display:block;margin-top:14px;font-style:normal;color:var(--muted);font-size:13.5px}
+.rev--wide cite{color:var(--panel-muted)}
+.rev--wide .eyebrow{margin-bottom:14px}
+
+/* --- terms --- */
+.terms{margin:34px 0 0;background:var(--surface);border:1px solid var(--line-soft);border-radius:var(--radius-lg);padding:4px 28px}
+.terms > div{display:grid;grid-template-columns:minmax(185px,.34fr) 1fr;gap:24px;align-items:baseline;padding:19px 0;border-bottom:1px solid var(--line-soft)}
+.terms > div:last-child{border-bottom:0}
+.terms dt{color:var(--muted);font-size:12.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.terms dd{margin:0;font-family:var(--serif);font-size:19px;font-weight:600;line-height:1.35}
+
+/* --- final --- */
+.final{display:grid;grid-template-columns:1fr .9fr;gap:60px;align-items:center}
+.final .contacts{margin-top:0}
+.final .btn{background:var(--btn-panel-bg);color:var(--btn-panel-fg)}
+.final .btn--ghost{background:transparent;color:var(--panel-fg);border-color:rgba(233,229,219,.32)}
+.final .btn--ghost:hover{border-color:var(--accent-on-panel);color:var(--accent-on-panel)}
+.final__side{display:grid;gap:14px;font-size:15px}
+.final__side a{text-decoration:none;border-bottom:1px solid rgba(233,229,219,.28);padding-bottom:2px}
+.final__side a:hover{color:var(--accent-on-panel);border-color:var(--accent-on-panel)}
+.final__side span{color:var(--panel-muted);font-size:13px;display:block;margin-bottom:2px;letter-spacing:.08em;text-transform:uppercase;font-weight:700}
+
+footer{border-top:1px solid var(--line);background:var(--surface)}
+.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;padding:26px 0;color:var(--muted);font-size:13.5px}
+.foot__name{font-family:var(--serif);color:var(--ink);font-size:15px;font-weight:600}
+
+@media (max-width:960px){
+  .sect{padding:64px 0}
+  .hero{padding:48px 0 56px}
+  .hero__grid,.about__grid,.award,.final{grid-template-columns:1fr;gap:40px}
+  .facts__grid{grid-template-columns:1fr 1fr}
+  .fact{border-bottom:1px solid var(--line-soft)}
+  .fact:nth-child(2){border-right:0}
+  .fact:nth-child(3),.fact:nth-child(4){border-bottom:0}
+  .cards,.revs,.duo{grid-template-columns:1fr}
+  .duo{gap:44px}
+  .terms > div{grid-template-columns:1fr;gap:5px}
+  .job{grid-template-columns:1fr;gap:12px}
+  .row{grid-template-columns:1fr;gap:4px}
+  .figure{padding:0 0 22px 18px;max-width:520px}
+}
+@media (max-width:560px){
+  body{font-size:16.5px}
+  .facts__grid{grid-template-columns:1fr}
+  .fact{border-right:0}
+  .fact:nth-child(3){border-bottom:1px solid var(--line-soft)}
+  .figure__badge{position:static;max-width:none;margin-top:16px}
+  .award__imgs{grid-template-columns:1fr}
+  .award__imgs img:last-child{aspect-ratio:1.2}
+}
+</style>
+</head>
+<body>
+
+
+<header class="top">
+  <div class="wrap top__in">
+    <span class="top__name">Аминджанова Рано Шавкатовна</span>
+    <div class="top__right">
+      <span class="pill">Открыта к предложениям</span>
+      <a class="top__tel" href="tel:+79130655360">+7 913 065-53-60</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero__grid">
+    <div>
+      <p class="eyebrow">Педагог нулевого класса · подготовка детей к школе</p>
+      <h1>Двадцать четыре года&nbsp;— с теми, кому идти в первый класс</h1>
+      <p class="hero__role">Аминджанова Рано Шавкатовна&nbsp;— педагог нулевого класса, лингвист. Красногорск, Московская область.</p>
+      <p class="lead">В педагогике с 2000 года, 17 лет из них&nbsp;— с будущими первоклассниками. Строю обучение как совместное исследование: у каждого ребёнка свой темп и своя траектория, а ошибка&nbsp;— часть учёбы.</p>
+      <div class="contacts">
+        <a class="btn" href="tel:+79130655360"><span class="btn__num">+7 913 065-53-60</span></a>
+        <a class="btn btn--ghost" href="tel:+79139590307"><span class="btn__num">+7 913 959-03-07</span></a>
+        <a class="btn btn--ghost" href="mailto:rano.amgv@gmail.com">Написать на почту</a>
+      </div>
+      <p class="hero__note">Полная занятость, работа на месте работодателя. Готова к собеседованию и открытому занятию.</p>
+    </div>
+    <div class="figure">
+      <img class="figure__img" src="rano-portrait.jpg" alt="Рано Шавкатовна Аминджанова">
+      <div class="figure__badge"><b>«Успешный педагог»</b>Победитель конкурса фестиваля «Инновация дошкольного успеха», 2024</div>
+    </div>
+  </div>
+</section>
+
+<section class="facts">
+  <div class="wrap facts__grid">
+    <div class="fact"><b>24+ года</b><span>педагогического стажа</span></div>
+    <div class="fact"><b>17 лет</b><span>подготовки к школе и нулевого класса</span></div>
+    <div class="fact"><b>2 высших</b><span>педагогическое и юридическое</span></div>
+    <div class="fact"><b>2024</b><span>победитель в номинации «Успешный педагог»</span></div>
+  </div>
+</section>
+
+<section class="sect">
+  <div class="wrap">
+    <div class="sect-head">
+      <p class="eyebrow">О себе</p>
+      <h2>«Учёба&nbsp;— это увлекательное приключение, которое педагог и дети совершают вместе»</h2>
+    </div>
+    <div class="about__grid">
+      <div class="prose">
+        <p>Работа с детьми для меня&nbsp;— призвание, которое каждый день приносит радость и нескончаемый поток энергии. Для меня каждый ребёнок&nbsp;— личность: неповторимая, уникальная, мыслящая. Мне важно увидеть эту уникальность и помочь ребёнку её развивать.</p>
+        <p>Каждый раз, когда я даю ребёнку новое задание, я вижу в его глазах страх. Первое, что он говорит: «Я не могу, у меня не получится». Я смотрю ему в глаза и отвечаю: «Ты сможешь. У тебя всё получится. Я рядом». И когда получается&nbsp;— ребёнок чувствует вкус победы, удивляется своим способностям и начинает верить в себя.</p>
+        <p>Моя главная цель&nbsp;— заинтересовать. Заинтересованный ребёнок задаёт вопросы, ищет информацию, учится самостоятельности. Я стремлюсь работать так, чтобы учёба была не механическим запоминанием, а занимательным процессом познания мира.</p>
+        <p>И ещё одно: каждый ребёнок должен знать, что ошибаться&nbsp;— нормально. Когда меня спрашивают о том, чего я не знаю, я отвечаю честно: «Я не знаю». Так ребёнок понимает, что никто не может знать всё, и в этом нет ничего стыдного. Незнание&nbsp;— не беда. А вот отсутствие желания узнавать&nbsp;— вот это настоящая проблема.</p>
+        <p>Успех ребёнка&nbsp;— результат совместной работы педагога и воспитанника. Я отвечаю не только за образовательный процесс, но и за воспитание, за то, как ученики воспринимают мир: я подаю им пример и стараюсь, чтобы этот пример был достойным. Я уверена, что именно в этом возрасте закладываются основы, которые приведут ребёнка к успеху в будущем.</p>
+      </div>
+      <div>
+        <blockquote class="quote">
+          <span class="quote__mark" aria-hidden="true">«</span>
+          <p>Ты сможешь. У тебя всё получится. Я рядом.</p>
+          <cite>То, что я говорю ребёнку перед каждым новым заданием</cite>
+        </blockquote>
+        <div class="mini">
+          <div><b>Требовательность и доброжелательность</b><span>Доверительные отношения с детьми, родителями и коллегами</span></div>
+          <div><b>Постоянное обучение</b><span>Повышение квалификации по дошкольному образованию и ФГОС</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sect sect--tint">
+  <div class="wrap">
+    <div class="sect-head">
+      <p class="eyebrow">Что даю детям</p>
+      <h2>Всё, что понадобится ребёнку на старте школы</h2>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <h3>Чтение и развитие речи</h3>
+        <p>Фонематический слух, различение звуков, соединение букв в слоги, чтение слов и предложений, понимание прочитанного и пересказ.</p>
+      </div>
+      <div class="card">
+        <h3>Основы математики и логика</h3>
+        <p>Числа и состав числа, простые задачи, сравнение, поиск закономерностей и умение объяснить своё решение вслух.</p>
+      </div>
+      <div class="card">
+        <h3>Письмо и подготовка руки</h3>
+        <p>Мелкая моторика, координация, графические навыки, умение работать карандашом внимательно и аккуратно.</p>
+      </div>
+      <div class="card">
+        <h3>Учебные навыки</h3>
+        <p>Память, внимание, умение понять инструкцию, рассуждать, доводить задание до конца и самостоятельно искать ответ.</p>
+      </div>
+    </div>
+    <dl class="rows">
+      <div class="row"><dt>Программа</dt><dd>Реализация образовательной программы в соответствии с календарно-тематическим планированием</dd></div>
+      <div class="row"><dt>Форма занятий</dt><dd>Развивающие занятия в игровой форме, смена видов деятельности, наглядные материалы</dd></div>
+      <div class="row"><dt>Разный уровень в группе</dt><dd>Задания разной сложности для детей с разным темпом и подготовкой</dd></div>
+      <div class="row"><dt>Среда</dt><dd>Формирование предметно-развивающей среды для игры, учёбы и творчества</dd></div>
+      <div class="row"><dt>Родители</dt><dd>Регулярная обратная связь, обсуждение актуальных вопросов и трудностей ребёнка</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="sect sect--ink">
+  <div class="wrap">
+    <div class="sect-head">
+      <p class="eyebrow">Видео</p>
+      <h2>Рано Шавкатовна о своей работе</h2>
+      <p class="lead">Об отношении к детям, ответственности педагога и обучении без механического запоминания.</p>
+    </div>
+    <div class="video">
+      <video controls playsinline preload="metadata" poster="video-poster.jpg" src="pedagog-o-rabote.mp4"></video>
+      <p class="video__cap">1 минута 30 секунд · включите звук</p>
+    </div>
+  </div>
+</section>
+
+<section class="sect">
+  <div class="wrap">
+    <div class="sect-head">
+      <p class="eyebrow">Опыт работы</p>
+      <h2>Четыре места работы, ни одного короткого</h2>
+    </div>
+    <div class="tl">
+      <article class="job">
+        <div class="job__when">Сентябрь 2021&nbsp;— настоящее время<span class="job__now">5 лет</span></div>
+        <div>
+          <p class="job__org">Семейная школа «Академия открытий»</p>
+          <p class="job__where">Московская область</p>
+          <p class="job__title">Педагог нулевого класса</p>
+          <ul>
+            <li>Реализация образовательной программы по подготовке к школе: развитие речи, обучение чтению, основы математики и письма&nbsp;— в соответствии с календарно-тематическим планированием.</li>
+            <li>Развивающие занятия в игровой форме, направленные на навыки, необходимые для успешного обучения в 1-м классе: фонематический слух, мелкая моторика, логическое мышление.</li>
+          </ul>
+        </div>
+      </article>
+      <article class="job">
+        <div class="job__when">Январь 2015&nbsp;— август 2021<span class="job__now">6 лет 8 месяцев</span></div>
+        <div>
+          <p class="job__org">Семейный центр образования и здоровья «Солнечный город»</p>
+          <p class="job__where">АНО дополнительного образования · Новосибирск</p>
+          <p class="job__title">Педагог по подготовке к школе</p>
+          <ul>
+            <li>Выполнение образовательных целей, утверждённых для возрастной группы, согласно календарно-тематическому планированию.</li>
+            <li>Развивающие и творческие занятия в группе в соответствии с программой.</li>
+            <li>Формирование предметно-развивающей среды для игры, учёбы и творчества.</li>
+            <li>Взаимодействие с родителями: обсуждение актуальных вопросов, обратная связь по каждому ребёнку.</li>
+          </ul>
+        </div>
+      </article>
+      <article class="job">
+        <div class="job__when">Январь 2009&nbsp;— август 2014<span class="job__now">5 лет 8 месяцев</span></div>
+        <div>
+          <p class="job__org">Детский сад № 197</p>
+          <p class="job__where">Муниципальное дошкольное образовательное учреждение · Новосибирск</p>
+          <p class="job__title">Педагог по подготовке к школе</p>
+        </div>
+      </article>
+      <article class="job">
+        <div class="job__when">Ноябрь 2000&nbsp;— ноябрь 2008<span class="job__now">8 лет 1 месяц</span></div>
+        <div>
+          <p class="job__org">Худжандский государственный университет</p>
+          <p class="job__where">Худжанд</p>
+          <p class="job__title">Преподаватель</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sect sect--tint">
+  <div class="wrap">
+    <div class="sect-head">
+      <p class="eyebrow">Образование</p>
+      <h2>Педагогика, лингвистика и право</h2>
+    </div>
+    <div class="duo">
+      <div>
+        <h3>Высшее образование</h3>
+        <div class="list">
+          <div class="item">
+            <p class="item__year">2000</p>
+            <p class="item__name">Педагог, лингвист</p>
+            <p class="item__org">Худжандский государственный университет · факультет иностранных языков</p>
+          </div>
+          <div class="item">
+            <p class="item__year">2003</p>
+            <p class="item__name">Юриспруденция</p>
+            <p class="item__org">Таджикский государственный университет права, бизнеса и политики · юридический факультет</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3>Повышение квалификации</h3>
+        <div class="list">
+          <div class="item">
+            <p class="item__year">2019</p>
+            <p class="item__name">Организация пришкольной подготовки в системе дошкольного образования с учётом ФГОС</p>
+            <p class="item__org">Учебный центр дополнительного образования «Всевебинары.ру»</p>
+          </div>
+          <div class="item">
+            <p class="item__year">2016</p>
+            <p class="item__name">Современные подходы к организации образовательной деятельности в ДОУ</p>
+            <p class="item__org">Городской центр развития образования</p>
+          </div>
+          <div class="item">
+            <p class="item__year">2010</p>
+            <p class="item__name">Профориентация молодёжи</p>
+            <p class="item__org">Муниципальное учреждение «Молодёжный центр труда»</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sect">
+  <div class="wrap">
+    <div class="sect-head">
+      <p class="eyebrow">Признание</p>
+      <h2>Победитель в номинации «Успешный педагог»</h2>
+    </div>
+    <div class="award">
+      <div class="award__imgs">
+        <img src="sertifikat.jpg" alt="Сертификат победителя конкурса в номинации «Успешный педагог»">
+        <img src="festival.jpg" alt="Рано Шавкатовна на фестивале «Инновация дошкольного успеха»">
+      </div>
+      <div class="award__body">
+        <p>Фестиваль по дошкольному образованию «Инновация дошкольного успеха» собирает педагогов дошкольного и предшкольного образования. Награда вручается за практику работы с детьми, а не за портфолио документов.</p>
+        <div class="certline">
+          <b>Сертификат победителя конкурса</b>
+          Номинация «Успешный педагог» · фестиваль «Инновация дошкольного успеха» · 8 июня 2024 года
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sect sect--tint">
+  <div class="wrap">
+    <div class="sect-head">
+      <p class="eyebrow">Отзывы родителей</p>
+      <h2>Что говорят семьи выпускников</h2>
+    </div>
+    <div class="revs">
+      <div class="rev rev--wide">
+        <p class="eyebrow">История семьи</p>
+        <p>«Когда у меня уже почти опустились руки, я нашла Рано Шавкатовну&nbsp;— и всё круто изменилось для нашей семьи. Мне кажется, что слова про индивидуальный подход, душевность и глубокие знания всё равно не передадут главного. Рано Шавкатовна&nbsp;— Учитель. Наш Учитель».</p>
+        <cite>Мама ученика</cite>
+      </div>
+      <div class="rev">
+        <p>«На уроках всегда интересно, за счёт этого дети усваивают большой объём информации. Рано Шавкатовна развивает умение думать, нестандартно мыслить и размышлять вслух».</p>
+        <cite>Мама ученика нулевого класса</cite>
+      </div>
+      <div class="rev">
+        <p>«Ребёнок научился читать и писать и был подготовлен настолько хорошо, что нас с удовольствием приняли в школу по программе 1–3».</p>
+        <cite>Мама выпускника</cite>
+      </div>
+      <div class="rev">
+        <p>«После нулевого класса идти в школу совсем не страшно. От учителя всегда была обратная связь и индивидуальный подход к каждому».</p>
+        <cite>Родители выпускника</cite>
+      </div>
+      <div class="rev">
+        <p>«Дети учатся без давления и напряжения, сами тянутся, интересуются и хотят заниматься. Ребёнок с удовольствием бежал на занятия».</p>
+        <cite>Мама ученицы</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sect sect--tight">
+  <div class="wrap">
+    <p class="eyebrow">Условия работы</p>
+    <h2 class="sect-head">Что я ищу</h2>
+    <dl class="terms">
+      <div><dt>Занятость</dt><dd>Полная, на месте работодателя</dd></div>
+      <div><dt>Должность</dt><dd>Педагог нулевого класса, подготовка к школе</dd></div>
+      <div><dt>Город</dt><dd>Красногорск, Московская область</dd></div>
+      <div><dt>Гражданство</dt><dd>Россия</dd></div>
+      <div><dt>Возраст</dt><dd>48 лет</dd></div>
+          </dl>
+  </div>
+</section>
+
+<section class="sect sect--ink">
+  <div class="wrap final">
+    <div>
+      <p class="eyebrow">Связаться</p>
+      <h2>Готова познакомиться и провести открытое занятие</h2>
+      <p class="lead">Позвоните или напишите&nbsp;— расскажу о программе, покажу материалы занятий и отвечу на вопросы о работе с группой.</p>
+    </div>
+    <div>
+      <div class="contacts">
+        <a class="btn" href="tel:+79130655360"><span class="btn__num">+7 913 065-53-60</span></a>
+        <a class="btn btn--ghost" href="tel:+79139590307"><span class="btn__num">+7 913 959-03-07</span></a>
+      </div>
+      <div class="final__side" style="margin-top:26px">
+        <div><span>Почта</span><a href="mailto:rano.amgv@gmail.com">rano.amgv@gmail.com</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <span class="foot__name">Аминджанова Рано Шавкатовна</span>
+    <span>Педагог нулевого класса · подготовка детей к школе · Красногорск, Московская область</span>
+  </div>
+</footer>
+
+</body>
+</html>
