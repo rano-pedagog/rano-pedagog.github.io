@@ -51,7 +51,7 @@ body{
   -webkit-font-smoothing:antialiased;
 }
 .shell{overflow-x:clip}
-img,video{display:block;max-width:100%}
+img,video{display:block;max-width:100%;height:auto}
 a{color:inherit}
 a,button{-webkit-tap-highlight-color:transparent}
 :focus-visible{outline:3px solid var(--honey);outline-offset:4px;border-radius:3px}
@@ -77,10 +77,9 @@ a,button{-webkit-tap-highlight-color:transparent}
 .sect--forest .kicker,.rev--lead .kicker{color:var(--forest-kicker)}
 
 h1,h2,h3{margin:0;font-family:var(--serif);font-weight:600;text-wrap:balance}
-h1{font-size:clamp(31px,5vw,60px);line-height:1.07;letter-spacing:-.033em}
-h2{font-size:clamp(26px,3.7vw,46px);line-height:1.12;letter-spacing:-.03em}
+h1{font-size:clamp(30px,4.5vw,54px);line-height:1.08;letter-spacing:-.03em}
+h2{max-width:17em;font-size:clamp(25px,3.3vw,41px);line-height:1.15;letter-spacing:-.026em}
 h3{font-size:20px;line-height:1.32;letter-spacing:-.01em}
-.head{max-width:24ch}
 .lead{max-width:60ch;margin:22px 0 0;font-size:clamp(17px,1.5vw,20px);line-height:1.58}
 .sect--forest .lead{color:var(--forest-muted)}
 
@@ -114,7 +113,7 @@ h3{font-size:20px;line-height:1.32;letter-spacing:-.01em}
   border-radius:var(--radius-lg);background:var(--sage);
 }
 .figure__img{
-  position:relative;width:100%;aspect-ratio:.94;object-fit:cover;object-position:50% 20%;
+  position:relative;width:100%;height:auto;aspect-ratio:.94;object-fit:cover;object-position:50% 24%;
   border-radius:clamp(84px,36vw,190px) clamp(84px,36vw,190px) var(--radius-lg) var(--radius-lg);
   box-shadow:var(--shadow);
 }
@@ -168,10 +167,13 @@ h3{font-size:20px;line-height:1.32;letter-spacing:-.01em}
 .vid video{width:100%;border-radius:var(--radius-md);background:#12211c;box-shadow:var(--shadow)}
 .vid figcaption{margin:15px 0 0;text-align:center;color:var(--muted);font-size:13.5px;line-height:1.5}
 .sect--forest .vid figcaption{color:var(--forest-muted)}
-.vid--tall{max-width:352px}
-.vid--tall video{aspect-ratio:9/16;object-fit:cover}
+.vid--tall{max-width:372px}
+.vid--tall video{object-fit:cover}
+.vid--lesson video{aspect-ratio:4/5}
+.vid--award{max-width:296px}
+.vid--award video{aspect-ratio:9/16}
 
-.lesson{display:grid;grid-template-columns:352px 1fr;gap:56px;align-items:center;margin-top:38px}
+.lesson{display:grid;grid-template-columns:372px minmax(0,1fr);gap:56px;align-items:center;margin-top:38px}
 .lesson .vid{margin:0}
 .ticks{margin:0;padding:0;list-style:none;display:grid;gap:14px}
 .ticks li{position:relative;padding-left:30px;font-size:16px;line-height:1.55}
@@ -207,10 +209,10 @@ h3{font-size:20px;line-height:1.32;letter-spacing:-.01em}
 
 /* ---------- award ---------- */
 .award{display:grid;grid-template-columns:1.06fr .94fr;gap:52px;align-items:center;margin-top:38px}
-.award__imgs{display:grid;grid-template-columns:1.45fr 1fr;gap:15px}
-.award__imgs img{width:100%;border-radius:var(--radius-md);box-shadow:var(--shadow);object-fit:cover}
+.award__imgs{display:grid;grid-template-columns:1.32fr 1fr;gap:15px;align-items:start}
+.award__imgs img{width:100%;height:auto;border-radius:var(--radius-md);box-shadow:var(--shadow);object-fit:cover}
 .award__imgs img:first-child{aspect-ratio:1.06}
-.award__imgs img:last-child{aspect-ratio:.66}
+.award__imgs img:last-child{aspect-ratio:.8}
 .award p{margin:0;color:var(--muted);font-size:16px}
 .cert{
   margin-top:22px;padding:19px 22px;border-radius:var(--radius-sm);
@@ -218,7 +220,7 @@ h3{font-size:20px;line-height:1.32;letter-spacing:-.01em}
   font-size:15px;line-height:1.55;color:var(--ink);
 }
 .cert b{display:block;font-family:var(--serif);font-size:18px;font-weight:600;margin-bottom:5px;color:var(--forest)}
-.ceremony{margin-top:46px;padding-top:40px;border-top:1px solid var(--line);display:grid;grid-template-columns:352px 1fr;gap:52px;align-items:center}
+.ceremony{margin-top:46px;padding-top:40px;border-top:1px solid var(--line);display:grid;grid-template-columns:296px minmax(0,1fr);gap:48px;align-items:center}
 .ceremony .vid{margin:0}
 .ceremony h3{color:var(--forest);margin-bottom:12px}
 .ceremony p{margin:0;color:var(--muted);font-size:16px;max-width:46ch}
@@ -229,6 +231,7 @@ h3{font-size:20px;line-height:1.32;letter-spacing:-.01em}
 .rev--lead{grid-column:1 / -1;background:var(--forest);color:var(--forest-fg);border-color:transparent}
 .rev p{margin:0;font-size:16px;line-height:1.62}
 .rev--lead p{font-family:var(--serif);font-size:clamp(19px,2.1vw,25px);line-height:1.44;font-weight:500}
+.rev .kicker{margin:0 0 13px;font-family:var(--sans);font-size:12.5px;font-weight:700;line-height:1.4}
 .rev cite{display:block;margin-top:14px;font-style:normal;color:var(--muted);font-size:13.5px}
 .rev--lead cite{color:var(--forest-muted)}
 
@@ -243,7 +246,7 @@ h3{font-size:20px;line-height:1.32;letter-spacing:-.01em}
 .terms dd{margin:0;font-family:var(--serif);font-size:19px;font-weight:600;line-height:1.35;color:var(--forest)}
 
 /* ---------- final ---------- */
-.final .head,.final h2{max-width:22ch}
+.final h2{max-width:14em}
 .final .lead{margin-top:20px}
 
 footer{border-top:1px solid var(--line);background:var(--paper)}
@@ -330,7 +333,7 @@ footer{border-top:1px solid var(--line);background:var(--paper)}
       <p class="note">Полная занятость, работа на месте работодателя. Готова к собеседованию и открытому занятию.</p>
     </div>
     <div class="figure">
-      <img class="figure__img" src="rano-portrait.jpg" alt="Рано Шавкатовна Аминджанова" width="1000" height="1500">
+      <img class="figure__img" src="rano-portrait.jpg" alt="Рано Шавкатовна Аминджанова">
       <div class="figure__badge"><b>«Успешный педагог»</b>Победитель конкурса фестиваля «Инновация дошкольного успеха», 2024</div>
     </div>
   </div>
@@ -412,8 +415,8 @@ footer{border-top:1px solid var(--line);background:var(--paper)}
   <div class="wrap">
     <div class="head">
       <p class="kicker">Видео</p>
-      <h2>Рано Шавкатовна о своей работе</h2>
-      <p class="lead">Об отношении к детям, ответственности педагога и обучении без механического запоминания.</p>
+      <h2>Рассказываю о своей работе</h2>
+      <p class="lead">Об отношении к детям, ответственности педагога и о том, почему учёба&nbsp;— это не механическое запоминание.</p>
     </div>
     <figure class="vid">
       <video controls playsinline preload="none" poster="poster-pedagog.jpg" src="pedagog-o-rabote.mp4"></video>
@@ -429,7 +432,7 @@ footer{border-top:1px solid var(--line);background:var(--paper)}
       <h2>Ребёнок читает, считает, двигается и рассуждает</h2>
     </div>
     <div class="lesson">
-      <figure class="vid vid--tall">
+      <figure class="vid vid--tall vid--lesson">
         <video controls playsinline preload="none" poster="poster-zanyatie.jpg" src="fragment-zanyatiya.mp4"></video>
         <figcaption>1 минута · съёмка на занятии</figcaption>
       </figure>
@@ -549,13 +552,13 @@ footer{border-top:1px solid var(--line);background:var(--paper)}
       </div>
     </div>
     <div class="ceremony">
-      <figure class="vid vid--tall">
+      <figure class="vid vid--tall vid--award">
         <video controls playsinline preload="none" poster="poster-nagrazhdenie.jpg" src="nagrazhdenie.mp4"></video>
-        <figcaption>29 секунд · съёмка из зала</figcaption>
+        <figcaption>29 секунд</figcaption>
       </figure>
       <div>
         <h3>Церемония награждения</h3>
-        <p>Вручение сертификата на сцене фестиваля, июнь 2024 года.</p>
+        <p>Вручение сертификата на сцене фестиваля, июнь 2024 года. Съёмка из зала.</p>
       </div>
     </div>
   </div>
