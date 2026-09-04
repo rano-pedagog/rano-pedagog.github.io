@@ -2,7 +2,7 @@
 
 Персональная страница-резюме. Статический сайт, публикуется через GitHub Pages.
 
-**Онлайн:** https://azizmgv.github.io
+**Онлайн:** https://rano-pedagog.github.io
 
 ## Файлы
 
