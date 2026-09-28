@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="Аминджанова Рано Шавкатовна — педагог нулевого класса, подготовка детей к школе. 17 лет работы с будущими первоклассниками, победитель конкурса «Успешный педагог» 2024.">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
-<link rel="canonical" href="https://rano-pedagog.github.io/">
-<meta property="og:url" content="https://rano-pedagog.github.io/">
+<link rel="canonical" href="https://rano-pedagog.vercel.app/">
+<meta property="og:url" content="https://rano-pedagog.vercel.app/">
 <meta property="og:locale" content="ru_RU">
 <meta property="og:site_name" content="Аминджанова Рано Шавкатовна">
 <meta name="twitter:card" content="summary_large_image">
@@ -20,9 +20,9 @@
   "givenName": "Рано",
   "jobTitle": "Педагог нулевого класса",
   "description": "Педагог нулевого класса, подготовка детей к школе. 17 лет работы с будущими первоклассниками, общий педагогический стаж 25 лет.",
-  "url": "https://rano-pedagog.github.io/",
-  "mainEntityOfPage": "https://rano-pedagog.github.io/",
-  "image": "https://rano-pedagog.github.io/rano-portrait.jpg",
+  "url": "https://rano-pedagog.vercel.app/",
+  "mainEntityOfPage": "https://rano-pedagog.vercel.app/",
+  "image": "https://rano-pedagog.vercel.app/rano-portrait.jpg",
   "email": "amindzhanova.rano@bk.ru",
   "telephone": "+79139590307",
   "nationality": "Россия",
@@ -48,9 +48,12 @@
 </script>
 <meta property="og:title" content="Аминджанова Рано Шавкатовна — педагог нулевого класса">
 <meta property="og:description" content="17 лет работы с будущими первоклассниками. Победитель конкурса «Успешный педагог», 2024.">
-<meta property="og:image" content="rano-portrait.jpg">
+<meta property="og:image" content="https://rano-pedagog.vercel.app/rano-portrait.jpg">
+<meta property="og:image:width" content="666">
+<meta property="og:image:height" content="1000">
 <meta property="og:type" content="profile">
 <title>Аминджанова Рано Шавкатовна — педагог нулевого класса, подготовка детей к школе</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,500;7..72,600&family=Manrope:wght@400;500;600;700&display=swap">
@@ -131,7 +134,7 @@ h3{font-size:20px;line-height:1.32;letter-spacing:-.01em}
 
 /* ---------- top bar ---------- */
 .top{border-bottom:1px solid var(--line);background:rgba(255,253,248,.94)}
-.top__in{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 0;flex-wrap:wrap}
+.top__in{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:16px;flex-wrap:wrap}
 .top__name{font-family:var(--serif);font-size:17px;font-weight:600}
 .pill{
   display:inline-flex;align-items:center;gap:8px;padding:5px 13px;border-radius:999px;
@@ -293,7 +296,7 @@ h3{font-size:20px;line-height:1.32;letter-spacing:-.01em}
 footer{border-top:1px solid var(--line);background:var(--paper)}
 .foot{
   display:grid;grid-template-columns:1fr auto;gap:26px 56px;align-items:start;
-  padding:34px 0;padding-bottom:max(34px,env(safe-area-inset-bottom));
+  padding-top:34px;padding-bottom:max(34px,env(safe-area-inset-bottom));
 }
 .foot b{display:block;font-family:var(--serif);color:var(--forest);font-size:16px;font-weight:600}
 .foot__id span{display:block;margin-top:5px;color:var(--muted);font-size:13.5px;line-height:1.5}
@@ -309,9 +312,92 @@ footer{border-top:1px solid var(--line);background:var(--paper)}
   letter-spacing:.09em;text-transform:uppercase;
 }
 
+/* ---------- games ---------- */
+.games{margin-top:38px;border-top:1px solid var(--line)}
+.game{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:56px;align-items:start;padding:44px 0;border-bottom:1px solid var(--line)}
+.game:last-child{border-bottom:0;padding-bottom:0}
+.game__num{margin:0 0 10px;color:var(--terracotta);font-size:12.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.game h3{color:var(--forest);font-size:clamp(22px,2.4vw,28px)}
+.game__task{margin:14px 0 0;font-size:16px;line-height:1.6}
+.game__goal{margin:14px 0 0;color:var(--muted);font-size:14.5px;line-height:1.55}
+.game__goal b{color:var(--ink);font-weight:700}
+.game__progress{
+  display:inline-flex;margin:22px 0 0;padding:5px 13px;border-radius:999px;
+  background:var(--sage);color:var(--forest);font-size:13.5px;font-weight:700;font-variant-numeric:tabular-nums;
+}
+
+.board{padding:28px;border-radius:var(--radius-md);background:var(--sage)}
+.board__bar{
+  display:flex;align-items:center;justify-content:space-between;gap:12px 18px;flex-wrap:wrap;
+  min-height:62px;margin-top:24px;padding-top:18px;border-top:1px solid rgba(35,72,61,.14);
+}
+.board__msg{margin:0;flex:1 1 220px;color:var(--forest);font-size:15.5px;font-weight:600;line-height:1.5}
+.board__msg.is-error{color:var(--terracotta)}
+
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  min-height:44px;padding:10px 20px;border:0;border-radius:999px;
+  background:var(--forest);color:var(--forest-fg);
+  font:700 14.5px/1.2 var(--sans);cursor:pointer;touch-action:manipulation;
+  transition:background .15s;
+}
+.btn:hover{background:#1a3830}
+.btn[hidden]{display:none}
+
+.tile,.slot,.syl{font-family:var(--sans);font-weight:700;text-transform:uppercase}
+.tile,.syl{
+  border:1.5px solid var(--line);background:var(--paper);color:var(--ink);
+  cursor:pointer;touch-action:manipulation;
+  transition:background .15s,border-color .15s,color .15s,box-shadow .15s;
+}
+.tile:hover,.syl:hover{border-color:var(--honey)}
+.is-miss{animation:shake .38s}
+@keyframes shake{20%{transform:translateX(-6px)}40%{transform:translateX(6px)}60%{transform:translateX(-4px)}80%{transform:translateX(3px)}}
+@keyframes pop{0%{transform:scale(.7);opacity:0}100%{transform:none;opacity:1}}
+
+/* order game */
+.order{display:grid;grid-template-columns:minmax(0,1fr) 148px;gap:26px;align-items:center}
+.order__tiles{display:flex;flex-wrap:wrap;align-content:center;justify-content:center;gap:16px 12px;min-height:148px;padding:6px 4px}
+.tile{
+  position:relative;display:grid;place-items:center;width:60px;height:66px;padding:0;
+  border-radius:15px;font-size:31px;line-height:1;
+  rotate:var(--rot,0deg);translate:0 var(--dy,0px);box-shadow:0 3px 0 rgba(35,72,61,.08);
+}
+.tile sup{position:absolute;top:6px;right:7px;color:var(--terracotta);font-size:12.5px;line-height:1}
+.tile.is-used{background:transparent;border-style:dashed;border-color:rgba(35,72,61,.2);color:transparent;box-shadow:none;cursor:default}
+.tile.is-used sup{visibility:hidden}
+.order__pic{display:grid;place-items:center;aspect-ratio:1;border-radius:22px;background:var(--paper)}
+.order__pic svg{width:82%;height:82%}
+.order__slots{grid-column:1 / -1;display:grid;grid-template-columns:repeat(var(--n),minmax(0,62px));justify-content:center;gap:8px}
+.slot{
+  display:grid;place-items:center;aspect-ratio:62/68;
+  border:1.5px solid #b9c8bf;border-radius:10px;background:#fff;
+  color:var(--forest);font-size:clamp(20px,5.4vw,30px);line-height:1;
+}
+.slot.is-next{border-color:var(--honey);box-shadow:0 0 0 3px rgba(226,180,91,.3)}
+.slot b{animation:pop .22s ease-out}
+.order.is-done .slot{border-color:var(--forest);background:var(--forest);color:var(--forest-fg)}
+
+/* match game */
+.match{position:relative;display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1fr);column-gap:clamp(56px,12vw,120px);max-width:480px;margin-inline:auto}
+.match__col{position:relative;z-index:1;display:grid;gap:8px}
+.match__lines{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none}
+.match__lines line{stroke:var(--terracotta);stroke-width:2.5;stroke-linecap:round;stroke-dasharray:1;animation:draw .3s ease-out}
+.match__lines circle{fill:var(--terracotta)}
+@keyframes draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+.syl{min-height:44px;padding:6px 10px;border-radius:12px;font-size:19px;line-height:1.1;letter-spacing:.05em}
+.syl[aria-pressed="true"]{border-color:var(--forest);background:var(--forest);color:var(--forest-fg)}
+.syl.is-done{border-color:rgba(184,79,54,.5);background:transparent;color:var(--terracotta);cursor:default}
+.found{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;min-height:34px;margin:22px 0 0;padding:0;list-style:none}
+.found li{
+  padding:4px 13px;border-radius:999px;background:var(--paper);color:var(--forest);
+  font-size:15px;font-weight:700;letter-spacing:.04em;animation:pop .22s ease-out;
+}
+
 /* ---------- tablet ---------- */
 @media (max-width:1040px){
   .about,.lesson,.ceremony,.award{grid-template-columns:1fr;gap:38px}
+  .game{grid-template-columns:1fr;gap:26px}
   .lesson .vid,.ceremony .vid{margin-inline:auto}
   .hero__grid{gap:48px}
 }
@@ -338,10 +424,10 @@ footer{border-top:1px solid var(--line);background:var(--paper)}
   .sect--tight{padding:44px 0}
   .hero{padding:32px 0 48px}
   .hero::before{display:none}
-  .top__in{padding:13px 0}
+  .top__in{padding-block:13px}
   .top__name{font-size:15.5px}
   .facts__grid{grid-template-columns:1fr}
-  .fact{padding:20px var(--gut);border-right:0;border-bottom:1px solid var(--line-soft)}
+  .fact{padding:20px 0;border-right:0;border-bottom:1px solid var(--line-soft)}
   .fact:nth-child(3){border-bottom:1px solid var(--line-soft)}
   .fact:last-child{border-bottom:0}
   .figure{max-width:none;padding:0}
@@ -359,6 +445,17 @@ footer{border-top:1px solid var(--line);background:var(--paper)}
   .foot{grid-template-columns:1fr;gap:22px}
   .foot__contacts{justify-items:start;gap:4px}
   .foot__contacts a{padding:8px 0;font-size:16px}
+  .game{padding:36px 0}
+  .board{margin-inline:-6px;padding:20px 16px;border-radius:var(--radius-sm)}
+  .order{grid-template-columns:minmax(0,1fr) 92px;gap:14px}
+  .order__tiles{min-height:96px;gap:12px 8px;padding:4px 0;justify-content:flex-start}
+  .tile{width:46px;height:50px;border-radius:12px;font-size:24px}
+  .tile sup{top:4px;right:5px;font-size:10.5px}
+  .order__pic{border-radius:16px}
+  .order__slots{gap:5px}
+  .slot{border-radius:8px}
+  .match{column-gap:clamp(40px,14vw,64px)}
+  .syl{font-size:17px}
 }
 @media (max-width:380px){
   .job__when,.item__org,.fact span{font-size:13.5px}
@@ -457,6 +554,62 @@ footer{border-top:1px solid var(--line);background:var(--paper)}
       <div><dt>Среда</dt><dd>Формирование предметно-развивающей среды для игры, учёбы и творчества</dd></div>
       <div><dt>Родители</dt><dd>Регулярная обратная связь, обсуждение актуальных вопросов и трудностей ребёнка</dd></div>
     </dl>
+  </div>
+</section>
+
+<section class="sect" id="igry">
+  <div class="wrap">
+    <div class="head">
+      <p class="kicker">Интерактивные игры</p>
+      <h2>Поиграйте с ребёнком в задания с моих занятий</h2>
+      <p class="lead">Эти задания мы делаем на подготовке к чтению: собираем слово из букв и соединяем слоги. Пройти их можно вместе с ребёнком с телефона или компьютера.</p>
+    </div>
+    <div class="games">
+
+      <article class="game" data-game="order">
+        <div>
+          <p class="game__num">Игра 1</p>
+          <h3>Собери слово</h3>
+          <p class="game__task">Нажимай на буквы по порядку цифр: сначала 1, потом 2, 3… Прочитай, какое получилось слово.</p>
+          <p class="game__goal"><b>Развивает:</b> знание букв, внимание, чтение слова целиком</p>
+          <p class="game__progress" data-progress></p>
+        </div>
+        <div class="board">
+          <div class="order" data-order>
+            <div class="order__tiles" data-tiles></div>
+            <div class="order__pic" data-pic role="img" aria-label="Картинка-подсказка"></div>
+            <div class="order__slots" data-slots aria-label="Слово"></div>
+          </div>
+          <div class="board__bar">
+            <p class="board__msg" data-msg aria-live="polite"></p>
+            <button class="btn" type="button" data-next hidden></button>
+          </div>
+        </div>
+      </article>
+
+      <article class="game" data-game="match">
+        <div>
+          <p class="game__num">Игра 2</p>
+          <h3>Найди слово</h3>
+          <p class="game__task">Слева&nbsp;— первые слоги слов. Нажми на слог, потом найди справа продолжение слова. Прочитай, что получилось.</p>
+          <p class="game__goal"><b>Развивает:</b> слоговой анализ и синтез, чтение по слогам</p>
+          <p class="game__progress" data-progress></p>
+        </div>
+        <div class="board">
+          <div class="match" data-match>
+            <svg class="match__lines" data-lines aria-hidden="true"></svg>
+            <div class="match__col" data-col="l"></div>
+            <div class="match__col" data-col="r"></div>
+          </div>
+          <ul class="found" data-found aria-label="Найденные слова"></ul>
+          <div class="board__bar">
+            <p class="board__msg" data-msg aria-live="polite"></p>
+            <button class="btn" type="button" data-next hidden>Сыграть ещё раз</button>
+          </div>
+        </div>
+      </article>
+
+    </div>
   </div>
 </section>
 
@@ -589,8 +742,8 @@ footer{border-top:1px solid var(--line);background:var(--paper)}
     </div>
     <div class="award">
       <div class="award__imgs">
-        <img src="sertifikat.jpg" alt="Сертификат победителя конкурса в номинации «Успешный педагог»">
-        <img src="festival.jpg" alt="Рано Шавкатовна на фестивале «Инновация дошкольного успеха»">
+        <img loading="lazy" src="sertifikat.jpg" alt="Сертификат победителя конкурса в номинации «Успешный педагог»">
+        <img loading="lazy" src="festival.jpg" alt="Рано Шавкатовна на фестивале «Инновация дошкольного успеха»">
       </div>
       <div>
         <p>Фестиваль по дошкольному образованию «Инновация дошкольного успеха» собирает педагогов дошкольного и предшкольного образования. Награда вручается за практику работы с детьми, а не за портфолио документов.</p>
@@ -682,6 +835,284 @@ footer{border-top:1px solid var(--line);background:var(--paper)}
 
 </div>
 
+<script>
+(() => {
+  const shuffle = (a) => {
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  };
+  const rand = (min, max) => min + Math.random() * (max - min);
+  const shake = (el) => {
+    el.classList.remove('is-miss');
+    void el.offsetWidth;
+    el.classList.add('is-miss');
+  };
+  const say = (el, text, error = false) => {
+    el.textContent = text;
+    el.classList.toggle('is-error', error);
+  };
+
+  /* ---------- game 1: letters in order ---------- */
+  const PICS = {
+    voda: '<ellipse cx="60" cy="99" rx="46" ry="11" fill="#a9cfe3"/><ellipse cx="54" cy="97" rx="24" ry="4.5" fill="#d3e8f2"/><path d="M60 12C52 28 38 42 38 60a22 22 0 0 0 44 0C82 42 68 28 60 12z" fill="#4f93bf"/><path d="M49 57c0 7 3 12 8 14" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".7"/>',
+    volk: '<path d="M28 18l26 26-30 8z" fill="#6f7c82"/><path d="M92 18L66 44l30 8z" fill="#6f7c82"/><path d="M33 29l13 15-14 4z" fill="#d9b8a3"/><path d="M87 29L74 44l14 4z" fill="#d9b8a3"/><path d="M60 32c22 0 38 14 38 32 0 8-4 14-10 18-6 14-16 24-28 24s-22-10-28-24c-6-4-10-10-10-18 0-18 16-32 38-32z" fill="#8a979d"/><path d="M60 62c10 0 17 9 17 21 0 13-8 21-17 21s-17-8-17-21c0-12 7-21 17-21z" fill="#e4e8e6"/><circle cx="46" cy="58" r="5" fill="#e2b45b"/><circle cx="74" cy="58" r="5" fill="#e2b45b"/><circle cx="46" cy="58" r="2.4" fill="#26332f"/><circle cx="74" cy="58" r="2.4" fill="#26332f"/><path d="M38 49l13 5M82 49l-13 5" stroke="#4d585d" stroke-width="3" stroke-linecap="round"/><ellipse cx="60" cy="83" rx="7" ry="5" fill="#26332f"/><path d="M60 88v6m-7 2c3 3 11 3 14 0" fill="none" stroke="#26332f" stroke-width="2.5" stroke-linecap="round"/>',
+    trava: '<rect x="8" y="98" width="104" height="7" rx="3.5" fill="#b08a5a"/><g fill="#5f9148"><path d="M16 100C19 80 16 62 8 46c15 12 21 32 21 54z"/><path d="M36 100c-2-24 2-48 14-66-4 22-2 44 4 66z"/><path d="M60 100c0-26 6-50 22-70-8 24-10 48-8 70z"/><path d="M84 100c2-20 10-36 26-46-10 14-14 30-14 46z"/></g><g fill="#86b862"><path d="M26 100c0-18-4-34-12-44 12 8 20 26 20 44z"/><path d="M48 100c0-20-6-40-18-54 16 10 26 32 26 54z"/><path d="M72 100c-2-22-10-40-24-52 18 8 30 28 32 52z"/><path d="M96 100c-2-16-8-30-18-38 14 6 24 20 26 38z"/></g>',
+    tvorog: '<path d="M86 42l16-24" stroke="#aab4b8" stroke-width="6" stroke-linecap="round"/><ellipse cx="60" cy="101" rx="30" ry="5" fill="#cfd9d1"/><g fill="#fffdf6" stroke="#e0d2b6" stroke-width="2"><circle cx="35" cy="58" r="11"/><circle cx="85" cy="58" r="11"/><circle cx="51" cy="49" r="13"/><circle cx="70" cy="48" r="12"/><circle cx="60" cy="58" r="12"/></g><g fill="#efe4cc"><circle cx="46" cy="47" r="2"/><circle cx="66" cy="44" r="2"/><circle cx="58" cy="55" r="2"/><circle cx="80" cy="56" r="2"/><circle cx="36" cy="56" r="2"/></g><path d="M16 61h88c-2 22-18 37-44 37S18 83 16 61z" fill="#4f93bf"/><path d="M16 61h88" stroke="#3b7aa3" stroke-width="4" stroke-linecap="round"/><path d="M30 72c6 10 16 15 28 16" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" opacity=".45"/>',
+    rukava: '<g stroke="#23483d" stroke-width="2.5" stroke-linejoin="round"><path d="M38 24L14 74l15 7 9-25z" fill="#e2b45b"/><path d="M82 24l24 50-15 7-9-25z" fill="#e2b45b"/><path d="M38 24l12-6h20l12 6v80H38z" fill="#fffdf8"/><path d="M50 18l10 12-7 8-9-14zM70 18L60 30l7 8 9-14z" fill="#fffdf8"/><path d="M18 66l12 7M102 66l-12 7" fill="none"/></g><g fill="#23483d"><circle cx="60" cy="46" r="2"/><circle cx="60" cy="62" r="2"/><circle cx="60" cy="78" r="2"/><circle cx="60" cy="94" r="2"/></g>',
+    podkova: '<path d="M34 100V60a26 26 0 0 1 52 0v40" fill="none" stroke="#d09a3a" stroke-width="18"/><path d="M28 60a32 32 0 0 1 20-29.6" fill="none" stroke="#f0cf85" stroke-width="3" stroke-linecap="round"/><rect x="23" y="98" width="22" height="8" rx="3" fill="#a8741f"/><rect x="75" y="98" width="22" height="8" rx="3" fill="#a8741f"/><g fill="#7a5418"><circle cx="34" cy="70" r="2.6"/><circle cx="34" cy="86" r="2.6"/><circle cx="37.5" cy="47" r="2.6"/><circle cx="47" cy="37.5" r="2.6"/><circle cx="73" cy="37.5" r="2.6"/><circle cx="82.5" cy="47" r="2.6"/><circle cx="86" cy="70" r="2.6"/><circle cx="86" cy="86" r="2.6"/></g>',
+    samovar: '<g fill="#d99a2b" stroke="#9c6a17" stroke-width="2.5" stroke-linejoin="round"><path d="M36 48c-12 0-13 17-2 18M84 48c12 0 13 17 2 18" fill="none" stroke-width="4" stroke-linecap="round"/><path d="M55 14h10v18H55z"/><path d="M50 11h20v5H50z"/><path d="M44 38c0-10 32-10 32 0z"/><path d="M40 38h40c12 12 14 34 2 48H38c-12-14-10-36 2-48z"/><path d="M46 86h28l4 10H42z"/><path d="M34 96h52v6H34z"/></g><path d="M48 48c-4 8-4 20 0 28" fill="none" stroke="#f4d58d" stroke-width="4" stroke-linecap="round"/><path d="M53 62h14M60 71v8" stroke="#9c6a17" stroke-width="3" stroke-linecap="round"/><rect x="55" y="64" width="10" height="7" rx="2" fill="#b27a22"/>'
+  };
+  const WORDS = [
+    ['ВОДА', 'voda'], ['ВОЛК', 'volk'], ['ТРАВА', 'trava'], ['ТВОРОГ', 'tvorog'],
+    ['РУКАВА', 'rukava'], ['ПОДКОВА', 'podkova'], ['САМОВАР', 'samovar']
+  ];
+
+  const order = document.querySelector('[data-game="order"]');
+  const o = {
+    board: order.querySelector('[data-order]'),
+    tiles: order.querySelector('[data-tiles]'),
+    pic: order.querySelector('[data-pic]'),
+    slots: order.querySelector('[data-slots]'),
+    msg: order.querySelector('[data-msg]'),
+    next: order.querySelector('[data-next]'),
+    progress: order.querySelector('[data-progress]'),
+    word: 0,
+    step: 0
+  };
+
+  const renderWord = () => {
+    const [word, pic] = WORDS[o.word];
+    const idx = [...word].map((_, i) => i);
+    let mixed;
+    do mixed = shuffle(idx.slice()); while (mixed.every((v, i) => v === i));
+
+    o.step = 0;
+    o.board.classList.remove('is-done');
+    o.pic.innerHTML = `<svg viewBox="0 0 120 120" aria-hidden="true">${PICS[pic]}</svg>`;
+    o.tiles.replaceChildren(...mixed.map((i) => {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'tile';
+      b.dataset.i = i;
+      b.setAttribute('aria-label', `Буква ${word[i]}, цифра ${i + 1}`);
+      b.innerHTML = `${word[i]}<sup>${i + 1}</sup>`;
+      b.style.setProperty('--rot', `${rand(-9, 9).toFixed(1)}deg`);
+      b.style.setProperty('--dy', `${rand(-7, 7).toFixed(1)}px`);
+      return b;
+    }));
+    o.slots.style.setProperty('--n', word.length);
+    o.slots.replaceChildren(...idx.map(() => {
+      const s = document.createElement('span');
+      s.className = 'slot';
+      return s;
+    }));
+    o.slots.children[0].classList.add('is-next');
+    o.progress.textContent = `Слово ${o.word + 1} из ${WORDS.length}`;
+    o.next.hidden = true;
+    say(o.msg, 'Найди букву с цифрой 1');
+  };
+
+  o.tiles.addEventListener('click', (e) => {
+    const tile = e.target.closest('.tile');
+    if (!tile || tile.classList.contains('is-used')) return;
+    const word = WORDS[o.word][0];
+    const i = Number(tile.dataset.i);
+
+    if (i !== o.step) {
+      shake(tile);
+      say(o.msg, `Это цифра ${i + 1}. Найди цифру ${o.step + 1}`, true);
+      return;
+    }
+
+    tile.classList.add('is-used');
+    tile.setAttribute('aria-disabled', 'true');
+    tile.tabIndex = -1;
+    const slot = o.slots.children[o.step];
+    slot.classList.remove('is-next');
+    slot.innerHTML = `<b>${word[o.step]}</b>`;
+    o.step += 1;
+
+    if (o.step < word.length) {
+      o.slots.children[o.step].classList.add('is-next');
+      say(o.msg, `Верно! Теперь цифра ${o.step + 1}`);
+      if (document.activeElement === tile) o.tiles.querySelector('.tile:not(.is-used)').focus();
+      return;
+    }
+
+    o.board.classList.add('is-done');
+    const last = o.word === WORDS.length - 1;
+    say(o.msg, last ? `Все ${WORDS.length} слов собраны. Молодец!` : 'Молодец! Прочитай, какое получилось слово');
+    o.next.textContent = last ? 'Сыграть ещё раз' : 'Следующее слово →';
+    o.next.hidden = false;
+    o.next.focus({ preventScroll: true });
+  });
+
+  o.next.addEventListener('click', () => {
+    o.word = (o.word + 1) % WORDS.length;
+    renderWord();
+    o.tiles.firstElementChild.focus({ preventScroll: true });
+  });
+
+  renderWord();
+
+  /* ---------- game 2: syllables ---------- */
+  const PAIRS = [
+    ['МА', 'ЯК'], ['МО', 'РЕ'], ['МУ', 'ЗЫКА'], ['МЫ', 'ШАТА'], ['МИ', 'НУТА'],
+    ['ПА', 'РУС'], ['ПО', 'ВАР'], ['ПЫ', 'ЛЬ'], ['ПУ', 'ЛЯ'], ['ПИ', 'РАТ']
+  ];
+  const BOOK_ORDER = [3, 2, 0, 4, 1, 9, 8, 5, 6, 7];
+  const ALSO_WORDS = new Set(['ПОЛЯ', 'МОЛЬ']);
+
+  const match = document.querySelector('[data-game="match"]');
+  const m = {
+    area: match.querySelector('[data-match]'),
+    lines: match.querySelector('[data-lines]'),
+    left: match.querySelector('[data-col="l"]'),
+    right: match.querySelector('[data-col="r"]'),
+    found: match.querySelector('[data-found]'),
+    msg: match.querySelector('[data-msg]'),
+    again: match.querySelector('[data-next]'),
+    progress: match.querySelector('[data-progress]'),
+    sel: null,
+    done: 0,
+    rounds: 0
+  };
+
+  const sylButton = (side, i) => {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'syl';
+    b.dataset.side = side;
+    b.dataset.i = i;
+    b.textContent = PAIRS[i][side === 'l' ? 0 : 1];
+    b.setAttribute('aria-pressed', 'false');
+    return b;
+  };
+
+  const setProgress = () => {
+    m.progress.textContent = `Найдено ${m.done} из ${PAIRS.length}`;
+  };
+
+  const select = (b) => {
+    if (m.sel) m.sel.setAttribute('aria-pressed', 'false');
+    m.sel = b;
+    if (b) b.setAttribute('aria-pressed', 'true');
+  };
+
+  const placeLine = (line) => {
+    const box = m.area.getBoundingClientRect();
+    const l = m.left.children[line.dataset.i].getBoundingClientRect();
+    const r = m.right.querySelector(`[data-i="${line.dataset.i}"]`).getBoundingClientRect();
+    const x1 = l.right - box.left, y1 = l.top + l.height / 2 - box.top;
+    const x2 = r.left - box.left, y2 = r.top + r.height / 2 - box.top;
+    const [path, a, b] = line.children;
+    path.setAttribute('x1', x1); path.setAttribute('y1', y1);
+    path.setAttribute('x2', x2); path.setAttribute('y2', y2);
+    a.setAttribute('cx', x1); a.setAttribute('cy', y1);
+    b.setAttribute('cx', x2); b.setAttribute('cy', y2);
+  };
+
+  const drawLine = (i) => {
+    const ns = 'http://www.w3.org/2000/svg';
+    const g = document.createElementNS(ns, 'g');
+    g.dataset.i = i;
+    const line = document.createElementNS(ns, 'line');
+    line.setAttribute('pathLength', '1');
+    const a = document.createElementNS(ns, 'circle');
+    const b = document.createElementNS(ns, 'circle');
+    a.setAttribute('r', '4');
+    b.setAttribute('r', '4');
+    g.append(line, a, b);
+    m.lines.append(g);
+    placeLine(g);
+  };
+
+  const renderMatch = () => {
+    let order = BOOK_ORDER;
+    if (m.rounds > 0) {
+      do order = shuffle(PAIRS.map((_, i) => i)); while (order.some((v, i) => v === i));
+    }
+    m.rounds += 1;
+    m.sel = null;
+    m.done = 0;
+    m.left.replaceChildren(...PAIRS.map((_, i) => sylButton('l', i)));
+    m.right.replaceChildren(...order.map((i) => sylButton('r', i)));
+    m.lines.replaceChildren();
+    m.found.replaceChildren();
+    m.again.hidden = true;
+    setProgress();
+    say(m.msg, 'Нажми на первый слог слева');
+  };
+
+  m.area.addEventListener('click', (e) => {
+    const b = e.target.closest('.syl');
+    if (!b || b.classList.contains('is-done')) return;
+
+    if (!m.sel || m.sel.dataset.side === b.dataset.side) {
+      if (m.sel === b) {
+        select(null);
+        say(m.msg, 'Нажми на первый слог слева');
+        return;
+      }
+      select(b);
+      say(m.msg, b.dataset.side === 'l'
+        ? `Какое продолжение подходит к «${b.textContent}»?`
+        : `Какой слог стоит перед «${b.textContent}»?`);
+      return;
+    }
+
+    const [l, r] = b.dataset.side === 'l' ? [b, m.sel] : [m.sel, b];
+    const word = l.textContent + r.textContent;
+
+    if (l.dataset.i !== r.dataset.i) {
+      shake(b);
+      if (ALSO_WORDS.has(word)) {
+        const owner = PAIRS[r.dataset.i][0];
+        say(m.msg, `${word} — тоже слово! Но тогда для «${owner}» не останется пары. Поищи ещё`, true);
+      } else {
+        say(m.msg, `Слова ${word} нет. Попробуй другой слог`, true);
+      }
+      return;
+    }
+
+    select(null);
+    for (const x of [l, r]) {
+      x.classList.add('is-done');
+      x.setAttribute('aria-disabled', 'true');
+      x.tabIndex = -1;
+    }
+    drawLine(l.dataset.i);
+    const li = document.createElement('li');
+    li.textContent = word;
+    m.found.append(li);
+    m.done += 1;
+    setProgress();
+
+    if (m.done < PAIRS.length) {
+      say(m.msg, `Получилось слово ${word}!`);
+      const rest = m.left.querySelector('.syl:not(.is-done)');
+      if (document.activeElement === b) rest.focus();
+      return;
+    }
+    say(m.msg, `Все ${PAIRS.length} слов найдены. Молодец!`);
+    m.again.hidden = false;
+    m.again.focus({ preventScroll: true });
+  });
+
+  m.again.addEventListener('click', () => {
+    renderMatch();
+    m.left.firstElementChild.focus({ preventScroll: true });
+  });
+
+  const ro = new ResizeObserver(() => m.lines.querySelectorAll('g').forEach(placeLine));
+  [m.area, m.left, m.right].forEach((el) => ro.observe(el));
+
+  renderMatch();
+})();
+</script>
 
 </body>
 </html>

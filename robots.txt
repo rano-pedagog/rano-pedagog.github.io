@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://rano-pedagog.github.io/sitemap.xml
+Sitemap: https://rano-pedagog.vercel.app/sitemap.xml
